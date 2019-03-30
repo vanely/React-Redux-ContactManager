@@ -1,0 +1,41 @@
+import React, {Component} from 'react';
+
+class Contacts extends Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      contacts: [
+        {
+          id: 0,
+          name:"John Doe",
+          email: "jdoe@gmail.com",
+          phone: '555-555-5555' 
+        },
+        {
+          id: 1,
+          name: "Anne Doe",
+          email: "Adoe@gmail.com",
+          phone: '666-666-6666'
+        },
+        {
+          id: 2,
+          name: "Hanz shmoe",
+          email: "shmoe@gmail.com",
+          phone: '777-777-7777'
+        },
+      ]
+    };
+  }
+
+  render() {
+    return(
+      <section>
+
+      </section>
+    );
+  }
+}
+
+export default Contacts;
