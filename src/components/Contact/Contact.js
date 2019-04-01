@@ -5,9 +5,10 @@ class Contact extends Component {
     showContactInfo: true
   };
 
-  onShowClick = (e) => {
-    this.setState({showContactInfo: !this.state.showContactInfo});
-  }
+  //because the action is so short we can just pass it in the tag
+  // onShowClick = (e) => {
+  //   this.setState({showContactInfo: !this.state.showContactInfo});
+  // }
 
   render() {
 
@@ -15,7 +16,7 @@ class Contact extends Component {
 
     return(
       <section>
-        <h4>{name} <span onClick={() => this.setState({showContactInfo: this.state.showContactInfo})}>+</span></h4>
+        <h4>{name} <span onClick={() => this.setState({showContactInfo: !this.state.showContactInfo})}>+</span></h4>
         <ul>
           <li>Email: {email}</li>
           <li>Phone: {phone}</li>
@@ -24,3 +25,5 @@ class Contact extends Component {
     );
   }
 }
+
+export default Contact;
