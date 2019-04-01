@@ -13,17 +13,20 @@ class Contact extends Component {
   render() {
 
     const {name, email, phone} = this.props.contact;
+    const {showContactInfo} = this.state;
 
     return(
       <section>
         <h4>{name} <span onClick={() => this.setState({showContactInfo: !this.state.showContactInfo})}>+</span></h4>
+        {showContactInfo ? (
         <ul>
           <li>Email: {email}</li>
           <li>Phone: {phone}</li>
         </ul>
+        ): null}
       </section>
-    );
+      );
+    }
   }
-}
-
+  
 export default Contact;
