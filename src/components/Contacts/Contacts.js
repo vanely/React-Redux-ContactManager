@@ -30,11 +30,19 @@ class Contacts extends Component {
   }
 
   render() {
-    return(
-      <section>
 
-      </section>
-    );
+    const {contacts} = this.state;
+
+    return(
+      <React.Fragment>
+        {
+          contacts.map(contact => {
+            // passing single contacts item down to contact as contacts are iterated over
+            <Contact key={contact.id} contact={contact}/>
+          })
+        }
+      </React.Fragment>
+    );  
   }
 }
 
